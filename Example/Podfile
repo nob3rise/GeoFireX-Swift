@@ -1,0 +1,6 @@
+use_frameworks!
+target 'GeoFireX-Swift_Tests' do
+  pod 'GeoFireX-Swift', :path => '../'
+  
+  
+end
