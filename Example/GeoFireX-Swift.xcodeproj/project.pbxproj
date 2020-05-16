@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		C8769F1224702C5000A2CDF0 /* FirebaseTestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8769F0F24702C5000A2CDF0 /* FirebaseTestHelper.swift */; };
+		C8769F1324702C5000A2CDF0 /* GeoFireX_FunctionalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8769F1024702C5000A2CDF0 /* GeoFireX_FunctionalTests.swift */; };
+		C8769F1424702C5000A2CDF0 /* GeoFireX_FirebaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8769F1124702C5000A2CDF0 /* GeoFireX_FirebaseTests.swift */; };
 		C92BEA431AEE5393C57C6C3A /* Pods_GeoFireX_Swift_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E06F2EBB35CF1D66F33AE835 /* Pods_GeoFireX_Swift_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1676E707C5A116FBBF1153E7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		364240C03A528614DDD00CAD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		1676E707C5A116FBBF1153E7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		364240C03A528614DDD00CAD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* GeoFireX-Swift_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GeoFireX-Swift_Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		7900056D2F0993D48045E5ED /* GeoFireX-Swift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = "GeoFireX-Swift.podspec"; path = "../GeoFireX-Swift.podspec"; sourceTree = "<group>"; };
+		7900056D2F0993D48045E5ED /* GeoFireX-Swift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "GeoFireX-Swift.podspec"; path = "../GeoFireX-Swift.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C8769F0F24702C5000A2CDF0 /* FirebaseTestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseTestHelper.swift; sourceTree = "<group>"; };
+		C8769F1024702C5000A2CDF0 /* GeoFireX_FunctionalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoFireX_FunctionalTests.swift; sourceTree = "<group>"; };
+		C8769F1124702C5000A2CDF0 /* GeoFireX_FirebaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoFireX_FirebaseTests.swift; sourceTree = "<group>"; };
 		CAD783A4E83DCB6A8E69262D /* Pods-GeoFireX-Swift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoFireX-Swift_Tests.debug.xcconfig"; path = "Target Support Files/Pods-GeoFireX-Swift_Tests/Pods-GeoFireX-Swift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E06F2EBB35CF1D66F33AE835 /* Pods_GeoFireX_Swift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoFireX_Swift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F09941478F43AD72D2DF4192 /* Pods-GeoFireX-Swift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoFireX-Swift_Tests.release.xcconfig"; path = "Target Support Files/Pods-GeoFireX-Swift_Tests/Pods-GeoFireX-Swift_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -65,7 +69,9 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				C8769F0F24702C5000A2CDF0 /* FirebaseTestHelper.swift */,
+				C8769F1124702C5000A2CDF0 /* GeoFireX_FirebaseTests.swift */,
+				C8769F1024702C5000A2CDF0 /* GeoFireX_FunctionalTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -95,7 +101,6 @@
 				CAD783A4E83DCB6A8E69262D /* Pods-GeoFireX-Swift_Tests.debug.xcconfig */,
 				F09941478F43AD72D2DF4192 /* Pods-GeoFireX-Swift_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -131,14 +136,10 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
-					607FACCF1AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
-					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 4EEDAR4AHC;
 						LastSwiftMigration = 0900;
-						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
 			};
@@ -147,6 +148,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -178,11 +180,25 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-GeoFireX-Swift_Tests/Pods-GeoFireX-Swift_Tests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GeoFireX-Swift/GeoFireX_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/abseil/absl.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GeoFireX_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/absl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -218,7 +234,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				C8769F1324702C5000A2CDF0 /* GeoFireX_FunctionalTests.swift in Sources */,
+				C8769F1224702C5000A2CDF0 /* FirebaseTestHelper.swift in Sources */,
+				C8769F1424702C5000A2CDF0 /* GeoFireX_FirebaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +288,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -316,7 +334,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -328,6 +346,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CAD783A4E83DCB6A8E69262D /* Pods-GeoFireX-Swift_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 4EEDAR4AHC;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -341,8 +360,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeoFireX-Swift_Example.app/GeoFireX-Swift_Example";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -350,6 +368,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F09941478F43AD72D2DF4192 /* Pods-GeoFireX-Swift_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 4EEDAR4AHC;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -359,8 +378,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeoFireX-Swift_Example.app/GeoFireX-Swift_Example";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
